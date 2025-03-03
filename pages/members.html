@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Group Members - Seiji Fujimoto</title>
+  <!-- CSS: Bootstrap, Devicon, Font Awesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    /* 固定背景画像 */
+    .full-bg-image {
+      background: url('../personal/toronto.jpg') no-repeat center center fixed;
+      background-size: cover;
+      filter: brightness(40%);
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -10;
+    }
+    section {
+      padding: 100px 0;
+      color: white;
+      text-align: center;
+    }
+    /* 共通のナビゲーション・ソーシャルアイコン関連 */
+    .social-icons i {
+      font-size: 2em;
+    }
+    .social-icons {
+      text-align: center;
+      padding: 20px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+    }
+    .social-icons a:hover {
+      color: #007bff;
+    }
+    .navbar-nav .nav-item {
+      margin-right: 20px;
+    }
+    /* Divider (細い水平線) */
+    .divider {
+      margin: 20px auto;  /* 上下の余白は必要に応じて調整 */
+      width: 80%;         /* 横幅はお好みで */
+      text-align: center;
+    }
+    .divider .line {
+      border: none;
+      border-top: 1px solid #ccc;  /* 薄いグレー */
+      margin: 5px 0;
+    }
+    /* メンバー表示用のスタイル */
+    .member-row {
+      margin-bottom: 40px;
+      align-items: center;
+    }
+    /* 顔写真のサイズを統一 */
+    .member-row img {
+        width: 200px;  /* 幅を統一 */
+        height: 200px; /* 高さを統一 */
+        object-fit: cover; /* トリミングして均一表示 */
+        border-radius: 20px; /* 角を少し丸く（お好みで 50% にすると円形） */
+    }
+    .member-bio {
+      text-align: left;
+      color: #ddd;
+    }
+    /* About container (全体の横幅調整など、必要に応じて) */
+    .about-container {
+      max-width: 95%;
+    }
+.about-container h1,
+.about-container h2,
+.about-container h3 {
+  color: #ddd;
+}
+  </style>
+</head>
+<body>
+  <!-- 固定背景画像 -->
+  <div class="full-bg-image"></div>
+  
+  <!-- ナビゲーションバー（他ページと同様） -->
+  <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="https://sfseiji.github.io/">Seiji Fujimoto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/about.html">About Me</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/research.html">Research</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="../pages/members.html">Group Members</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/projects.html">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/teaching.html">Teaching</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/job.html">Job Opportunity</a>
+          </li>
+        </ul>
+        <div class="social-icons">
+          <a href="https://twitter.com/sfseiji" target="_blank" title="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://scholar.google.co.jp/citations?user=lnAouJ4AAAAJ&hl=en" target="_blank"
+             title="Google Scholar">
+            <i class="fas fa-graduation-cap"></i>
+          </a>
+          <a href="https://ui.adsabs.harvard.edu/" target="_blank" title="Publications on ADS">
+            <i class="fas fa-book"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Group Members Heading -->
+  <div class="container my-4 about-container">
+    <h1 class="text-center">Group Members</h1>
+  </div>
+  
+  <!-- Postdoc セクション -->
+  <div class="container my-4 about-container">
+    <h2 class="text-center">Postdoc</h2>
+    <div class="divider">
+      <hr class="line">
+      <hr class="line">
+    </div>
+    <!-- サンプルの Postdoc メンバー -->
+    <div class="row member-row">
+      <!-- 左側：画像 -->
+      <div class="col-md-3 text-center">
+        <img src="../group/qinyue.jpg" alt="qinyue" class="img-fluid rounded">
+      </div>
+      <!-- 右側：Bio -->
+      <div class="col-md-9 member-bio">
+        <h3>Dr. Qinyue Fei</h3>
+        <p><strong>Title:</strong> Postdoctral Fellow (Aug. 2025 - present)</p>
+        <p><strong>PhD:</strong> 2025, Peking University</p>
+        <p><strong>Interests:</strong> Extragalactic Astronomy, ALMA Observations, Cosmology</p>
+      </div>
+    </div>
+
+    <div class="row member-row">
+      <!-- 左側：画像 -->
+      <div class="col-md-3 text-center">
+        <img src="../group/test1.png" alt="yoshi" class="img-fluid rounded">
+      </div>
+      <!-- 右側：Bio -->
+      <div class="col-md-9 member-bio">
+        <h3>Dr. Yoshihisa Asada</h3>
+        <p><strong>Title:</strong> Dunlap Fellow (Sep. 2025 - present)</p>
+        <p><strong>PhD:</strong> 2025, University of Kyoto</p>
+        <p><strong>Interests:</strong> Extragalactic Astronomy, ALMA Observations, Cosmology</p>
+      </div>
+    </div>
+    <!-- ここに他の Postdoc メンバーも追加可能 -->
+
+  </div>
+  
+  <!-- PhD Students セクション -->
+  <div class="container my-4 about-container">
+    <h2 class="text-center">PhD Students</h2>
+    <div class="divider">
+      <hr class="line">
+      <hr class="line">
+    </div>
+    <!-- サンプルの PhD 学生 -->
+    <div class="row member-row">
+      <!-- 左側：画像 -->
+      <div class="col-md-3 text-center">
+        <img src="../group/phd1.jpg" alt="PhD Student Name" class="img-fluid rounded">
+      </div>
+      <!-- 右側：Bio -->
+      <div class="col-md-9 member-bio">
+        <h3>John Smith</h3>
+        <p><strong>PhD:</strong> Expected 2025, University of Toronto</p>
+        <p><strong>Interests:</strong> Galaxy Formation, JWST Observations, Stellar Populations</p>
+      </div>
+    </div>
+    <!-- ここに他の PhD 学生も追加可能 -->
+  </div>
+  
+</body>
+</html>
