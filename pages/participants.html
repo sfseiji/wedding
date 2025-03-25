@@ -120,7 +120,7 @@
   
 <!-- News Section -->
 <div class="container participants-list">
-    <h1 style="color: white;">Participants</h1>
+    <h1 style="color: white; margin-bottom: 30px;">Participants</h1>
     <div class="participant-name" data-index="0">山田 太郎 / Taro Yamada [新郎友人]</div>
     <div class="participant-name" data-index="1">鈴木 花子 / Hanako Suzuki [新婦友人]</div>
     <div class="participant-name" data-index="2">田中 一郎 / Ichiro Tanaka [新郎友人]</div>
@@ -157,11 +157,11 @@
 
     function showOverlay(index) {
         currentIndex = index;
-        document.getElementById('overlay-image').src = participants[index].image;
-        document.getElementById('overlay-text').textContent = participants[index].description;
-        document.getElementById('overlay-name').textContent = participants[index].name; // ←ここを追加
+        overlayImage.src = participants[index].image;
+        overlayText.textContent = participants[index].description;
         overlay.style.display = 'flex';
     }
+
     document.querySelectorAll('.participant-name').forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(element.getAttribute('data-index'));
