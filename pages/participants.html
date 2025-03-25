@@ -78,15 +78,20 @@
         .overlay-nav {
             position: absolute;
             top: 50%;
+            left: 0; /* ←追加 */
+            transform: translateY(-50%); /* ←追加（中央揃え） */
             width: 100%;
             display: flex;
             justify-content: space-between;
             font-size: 2rem;
             color: #000;
+            pointer-events: none; /* 追加 (画像がクリックされるのを妨げないように) */
         }
+
         .overlay-nav span {
             cursor: pointer;
             padding: 0 10px;
+            pointer-events: auto; /* カーソルはクリックできるように */
         }
         .close-btn {
             position: absolute;
