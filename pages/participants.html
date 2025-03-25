@@ -31,64 +31,68 @@
       left: 0;
       z-index: -10;
     }
-    /* セクション全体 */
-    section {
-      padding: 100px 0;
-      color: white;
-      text-align: center;
-    }
-    /* ナビゲーションバーとソーシャルアイコン */
-    .navbar-nav .nav-item {
-      margin-right: 20px;
-    }
-    .social-icons i {
-      font-size: 2em;
-    }
-    .social-icons {
-      text-align: center;
-      padding: 20px;
-    }
-    .social-icons a {
-      margin: 0 10px;
-      color: #333;
-    }
-    .social-icons a:hover {
-      color: #007bff;
-    }
-    /* Newsリスト用スタイル（背景や枠なし） */
-    .news-list {
-      max-width: 95%;
-      margin: auto;
-      text-align: left;
-      background-color: transparent; /* 透明 */
-    }
-    .news-list .list-group-item {
-      background-color: transparent;
-      border: none;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(255,255,255,0.15); /* 薄い水平線 */
-    }
-    .news-item {
-      display: flex;
-      align-items: center;
-    }
-    .news-date {
-      width: 100px;
-      font-weight: bold;
-      color: #fff;
-    }
-    .news-content {
-      flex: 1;
-      color: #ddd;
-    }
-    .news-content a {
-      color: #66b3ff;
-      text-decoration: underline;
-    }
-    .news-content a:hover {
-      color: #99ccff;
-    }
-  </style>
+        .participants-list {
+            margin-top: 80px;
+            text-align: center;
+        }
+        .participant-name {
+            cursor: pointer;
+            font-size: 1.5rem;
+            margin: 15px 0;
+            transition: color 0.3s;
+        }
+        .participant-name:hover {
+            color: #66b3ff;
+        }
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            display: none;
+        }
+        .overlay-content {
+            position: relative;
+            width: 80%;
+            max-width: 600px;
+            background-color: rgba(255,255,255,0.9);
+            color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .overlay-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .overlay-nav {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 2rem;
+            color: #000;
+        }
+        .overlay-nav span {
+            cursor: pointer;
+            padding: 0 10px;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+            font-size: 2rem;
+        }
+    </style>
 </head>
 <body>
   <!-- 固定背景画像 -->
@@ -113,120 +117,75 @@
     </div>
   </nav>
   
-  <!-- News Section -->
-  <section id="news">
-    <div class="container news-list my-4">
-      <h1 class="text-center">Participants</h1>
-      <ul class="list-group">
-         <!-- adding news here -->
-         <li class="list-group-item news-item">
-            <div class="news-date">07.2025</div>
-            <div class="news-content">
-              A new postdoc, Dr. Yoshihisa Asada, joined our group. 
-              <a href="https://sfseiji.github.io/pages/members.html" target="_blank">Details</a>
-            </div>
-         </li>         
-         <li class="list-group-item news-item">
-            <div class="news-date">07.2025</div>
-            <div class="news-content">
-              A new postdoc, Dr. Qinyue Fei, joined our group. 
-              <a href="https://sfseiji.github.io/pages/members.html" target="_blank">Details</a>
-            </div>
-         </li>         
-         <li class="list-group-item news-item">
-            <div class="news-date">07.2025</div>
-            <div class="news-content">
-              Arriving in Toronto. Our group started.  
-              <a href="https://sfseiji.github.io/" target="_blank">Details</a>
-            </div>
-         </li>         
-         <li class="list-group-item news-item">
-            <div class="news-date">05.2025</div>
-            <div class="news-content">
-              Giving a talk in the CANUCS team meeting held in Bled, Slovenia. 
-              <a href="" target="_blank">Details</a>
-            </div>
-         </li>         
-         <li class="list-group-item news-item">
-            <div class="news-date">05.2025</div>
-            <div class="news-content">
-              Giving a talk in a conference, <em>"galaxy origins in the JWST era: a “crisol” of stars, ISM, and super massive blackholes in the City of the Three Cultures"</em> in Toledo, Spain. 
-              <a href="https://galaxy-crisol25.github.io/website/index.html" target="_blank">Details</a>
-            </div>
-         </li>         
-         <li class="list-group-item news-item">
-            <div class="news-date">04.2025</div>
-            <div class="news-content">
-              Giving a colloquium talk at U. Illinois Urbana-Champaign.    
-              <a href="" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">03.2025</div>
-            <div class="news-content">
-              XX hours of JWST GO Cycle4 PI programs approved (#XX,XX,XX). 
-              <a href="https://www.stsci.edu/jwst/science-execution/approved-programs/directors-discretionary-time" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">03.2025</div>
-            <div class="news-content">
-              Giving a talk in an invited High-redshift workshop held in U. Chicago.    
-              <a href="" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">05.2025</div>
-            <div class="news-content">
-              Giving a talk (remote) in the UNCOVER+Megascience team meeting held in Colorado, USA. 
-              <a href="" target="_blank">Details</a>
-            </div>
-         </li>         
-         <li class="list-group-item news-item">
-            <div class="news-date">02.2025</div>
-            <div class="news-content">
-              38.7 hours of JWST DDT PI program approved (#9223). This is the largest extragalactic DD program so far approved. 
-              <a href="https://www.stsci.edu/jwst/science-execution/approved-programs/directors-discretionary-time" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">02.2025</div>
-            <div class="news-content">
-              A new paper published in ApJ (Fei, Silverman, Fujimoto et al. 2025).    
-              <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...980...84F/abstract" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">01.2025</div>
-            <div class="news-content">
-              A new paper submitted to ApJ (Fujimoto, Naidu, Chisholm et al. 2025).   
-              <a href="https://ui.adsabs.harvard.edu/abs/2025arXiv250111678F/abstract" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">01.2025</div>
-            <div class="news-content">
-              Giving a talk in an invited conference, <em>"The growth of galaxies in the Early Universe - X"</em> in Sesto, Italy. 
-              <a href="https://www.sexten-cfa.eu/event/growth25/" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">12.2024</div>
-            <div class="news-content">
-              Giving a talk in an invited conference, <em>"Synergistic ALMA+JWST view of the early universe"</em> in Leiden, Netherlands. 
-              <a href="https://www.lorentzcenter.nl/synergistic-almajwst-view-of-the-early-universe.html" target="_blank">Details</a>
-            </div>
-         </li>
-         <li class="list-group-item news-item">
-            <div class="news-date">12.2024</div>
-            <div class="news-content">
-              Giving a review talk in an invited conference, <em>Beyond the Edge of the Universe</em> in Sintra, Portugal. 
-              <a href="https://deep24.org/invited-speakers/" target="_blank">Details</a>
-            </div>
-         </li>
-      </ul>
+<!-- News Section -->
+<div class="container participants-list">
+    <h1>Participants</h1>
+    <div class="participant-name" data-index="0">山田 太郎 / Taro Yamada [新郎友人]</div>
+    <div class="participant-name" data-index="1">鈴木 花子 / Hanako Suzuki [新婦友人]</div>
+    <div class="participant-name" data-index="2">田中 一郎 / Ichiro Tanaka [新郎友人]</div>
+    <!-- 他の参加者を同じフォーマットで追加 -->
+</div>
+
+<div class="overlay" id="overlay">
+    <div class="overlay-content">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <img src="" alt="Participant Image" id="overlay-image">
+        <p id="overlay-text">Participant description goes here.</p>
+        <div class="overlay-nav">
+            <span id="prev-btn">&#10094;</span>
+            <span id="next-btn">&#10095;</span>
+        </div>
     </div>
-  </section>
-  
+</div>
+
+<script>
+    const participants = [
+        {name: '山田 太郎 / Taro Yamada [新郎友人]', image: '../photos/yamada.jpg', description: '新郎の親友であり、学生時代からの友人です。'},
+        {name: '鈴木 花子 / Hanako Suzuki [新婦友人]', image: '../photos/suzuki.jpg', description: '新婦の親しい友人であり、バレエ仲間です。'},
+        {name: '田中 一郎 / Ichiro Tanaka [新郎友人]', image: '../photos/tanaka.jpg', description: '新郎の大学時代の友人で、共に研究をしてきました。'}
+    ];
+
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlay-image');
+    const overlayText = document.getElementById('overlay-text');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentIndex = 0;
+
+    function showOverlay(index) {
+        currentIndex = index;
+        overlayImage.src = participants[index].image;
+        overlayText.textContent = participants[index].description;
+        overlay.style.display = 'flex';
+    }
+
+    document.querySelectorAll('.participant-name').forEach((element) => {
+        element.addEventListener('click', () => {
+            const index = parseInt(element.getAttribute('data-index'));
+            showOverlay(index);
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : participants.length - 1;
+        showOverlay(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < participants.length - 1) ? currentIndex + 1 : 0;
+        showOverlay(currentIndex);
+    });
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.style.display = 'none';
+    });
+</script>
+
 </body>
 </html>
+
