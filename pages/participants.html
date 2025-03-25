@@ -157,11 +157,11 @@
 
     function showOverlay(index) {
         currentIndex = index;
-        overlayImage.src = participants[index].image;
-        overlayText.textContent = participants[index].description;
+        document.getElementById('overlay-image').src = participants[index].image;
+        document.getElementById('overlay-text').textContent = participants[index].description;
+        document.getElementById('overlay-name').textContent = participants[index].name; // ←ここを追加
         overlay.style.display = 'flex';
     }
-
     document.querySelectorAll('.participant-name').forEach((element) => {
         element.addEventListener('click', () => {
             const index = parseInt(element.getAttribute('data-index'));
