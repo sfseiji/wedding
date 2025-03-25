@@ -19,13 +19,23 @@
             color: white;
             padding: 20px;
         }
-        .participant-img { position: relative; overflow: hidden; }
-        .participant-overlay {
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.6); display: flex; justify-content: center;
-            align-items: center; opacity: 0; transition: opacity 0.3s;
+        .participant-section {
+            position: relative;
         }
-        .participant-img:hover .participant-overlay { opacity: 1; }
+        .participant-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .participant-section:hover .participant-overlay { opacity: 1; }
         .horizontal-scroll {
             overflow-x: auto;
             white-space: nowrap;
@@ -37,8 +47,8 @@
         .main-title {
             position: absolute;
             top: 10%;
-            left: 0; /* ← 左端を指定することで確実に中央へ */
-            width: 100%; /* ← ここを80%から100%に変更 */
+            left: 0;
+            width: 100%;
             color: white;
             text-align: center;
             font-size: 2.5rem;
@@ -93,29 +103,9 @@
     </section>
 
     <!-- Participants -->
-    <section id="participants" class="section" style="background-image: url('photos/participants_bg.jpg');">
-        <div class="container h-100 d-flex flex-column justify-content-center">
-            <div class="row">
-                <div class="col-md-4 participant-img">
-                    <img src="photos/gabe_family.jpg" class="img-fluid">
-                    <div class="participant-overlay">
-                        <a href="#" class="btn btn-light">Learn more</a>
-                    </div>
-                </div>
-                <div class="col-md-4 participant-img">
-                    <img src="photos/arata.jpeg" class="img-fluid">
-                    <div class="participant-overlay">
-                        <a href="#" class="btn btn-light">Learn more</a>
-                    </div>
-                </div>
-                <div class="col-md-4 participant-img">
-                    <img src="photos/home_party.JPG" class="img-fluid">
-                    <div class="participant-overlay">
-                        <a href="#" class="btn btn-light">Learn more</a>
-                    </div>
-                </div>
-                <!-- Add more participant images here -->
-            </div>
+    <section id="participants" class="section participant-section" style="background-image: url('photos/heian.jpg');">
+        <div class="participant-overlay">
+            <a href="#" class="btn btn-light">Learn more</a>
         </div>
     </section>
 
