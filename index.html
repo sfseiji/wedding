@@ -115,50 +115,15 @@
 
     <!-- Photos -->
     <div style="text-align:center; color:white; font-size:2rem; margin:20px 0; font-family:'Times New Roman', Times, serif;">Photos</div>
-
-    <div id="random-gallery" class="row"></div>
-
-    <script>
-      // ここにアルバム内の画像URLのリストを作成します
-      const imageUrls = [
-        'https://photos.google.com/share/AF1QipN9YTNx0i0h6k4sOYGhBGo0fmEZQ3PL7Hnka6nGj7OHZq30S9_rfVo8ix23zS2lKQ/photo/AF1QipM0UIYJ6PzZes97HOOdI2SRttT357kLIJ9rEhAu?key=TlZ6OVR4UGZ5MXlCXzNsdUVDM25hZ1NxR2VaMi1R',
-        'https://photos.google.com/share/AF1QipN9YTNx0i0h6k4sOYGhBGo0fmEZQ3PL7Hnka6nGj7OHZq30S9_rfVo8ix23zS2lKQ/photo/AF1QipOMuyVPHmp1JyjC46kpvd4iOchCnY2gT5ArPk6f?key=TlZ6OVR4UGZ5MXlCXzNsdUVDM25hZ1NxR2VaMi1R',
-        'https://photos.google.com/share/AF1QipN9YTNx0i0h6k4sOYGhBGo0fmEZQ3PL7Hnka6nGj7OHZq30S9_rfVo8ix23zS2lKQ/photo/AF1QipNPYJNm9xMT3F4GKRJ8Ko4YeVUx_1MUbl0Es7Wa?key=TlZ6OVR4UGZ5MXlCXzNsdUVDM25hZ1NxR2VaMi1R',
-        'https://photos.google.com/share/AF1QipN9YTNx0i0h6k4sOYGhBGo0fmEZQ3PL7Hnka6nGj7OHZq30S9_rfVo8ix23zS2lKQ/photo/AF1QipM1q_Cs7weRSDgufjH2cjy8w5-wQ6OQa3o3eTOa?key=TlZ6OVR4UGZ5MXlCXzNsdUVDM25hZ1NxR2VaMi1R',
-        'https://photos.google.com/share/AF1QipN9YTNx0i0h6k4sOYGhBGo0fmEZQ3PL7Hnka6nGj7OHZq30S9_rfVo8ix23zS2lKQ/photo/AF1QipM9bNt_a3rMA8gWYzTtIF0CH-lHZqFx7C31VuTs?key=TlZ6OVR4UGZ5MXlCXzNsdUVDM25hZ1NxR2VaMi1R',
-        'https://photos.google.com/share/AF1QipN9YTNx0i0h6k4sOYGhBGo0fmEZQ3PL7Hnka6nGj7OHZq30S9_rfVo8ix23zS2lKQ/photo/AF1QipMfFuvFHoQ5VxCRGIGFRfoTJLA-JFfoi0U7vDxO?key=TlZ6OVR4UGZ5MXlCXzNsdUVDM25hZ1NxR2VaMi1R',
-      ];
-
-      // リストからランダムに5枚を選ぶ
-      function getRandomImages(arr, count) {
-        const shuffled = arr.slice().sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, count);
-      }
-
-      const randomImages = getRandomImages(imageUrls, 5);
-      const galleryDiv = document.getElementById('random-gallery');
-
-      randomImages.forEach(url => {
-        const colDiv = document.createElement('div');
-        colDiv.className = 'col-md-2'; // 例えば5列ならcol-md-2など調整します
-        colDiv.innerHTML = `<img src="${url}" style="width:100%;cursor:pointer;" onclick="openLightbox('${url}')">`;
-        galleryDiv.appendChild(colDiv);
-      });
-
-      // 簡単なライトボックス機能の例
-      function openLightbox(imageUrl) {
-        const lightboxHtml = `
-          <div id="lightbox-overlay" style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);display:flex;align-items:center;justify-content:center;">
-            <img src="${imageUrl}" style="max-width:90%;max-height:90%;">
-          </div>`;
-        document.body.insertAdjacentHTML('beforeend', lightboxHtml);
-        document.getElementById('lightbox-overlay').addEventListener('click', function() {
-          this.remove();
-        });
-      }
-    </script>
-
-
+    <section id="photos" class="section bg-dark text-center" style="background-image: url('photos/photos_bg.jpg');">
+        <div class="container h-100 d-flex flex-column justify-content-center">
+            <div class="horizontal-scroll">
+                <img src="upload_photo_eg/noma.jpg">
+                <img src="upload_photo_eg/copen.jpg">
+                <img src="upload_photo_eg/ouchi.jpg">
+                <img src="upload_photo_eg/owada.jpg">
+                <img src="upload_photo_eg/texas.jpg">
+            </div>
             <a href="https://photos.app.goo.gl/qjY3KRRc3gj6vozr9" target="_blank" class="btn btn-info mt-3">
               Upload More
             </a>
