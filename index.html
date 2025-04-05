@@ -21,14 +21,20 @@
             color: white;
             padding: 20px;
         }
+        /* 画像のレイアウト */
         .horizontal-scroll {
-            overflow-x: auto;
-            white-space: nowrap;
+          display: flex;               /* 横並びに */
+          gap: 20px;                   /* 画像間の余白 */
+          overflow-x: auto;            /* 横スクロール許可 */
+          padding: 10px 0;             /* 上下の余白 */
         }
         .horizontal-scroll img {
-            display: inline-block; width: 250px; height: 150px;
-            margin-right: 10px; object-fit: cover;
+          width: 300px;                /* 画像を大きめに */
+          height: 200px;
+          object-fit: cover;
+          cursor: pointer;
         }
+
         .main-title {
             position: absolute;
             top: 10%;
