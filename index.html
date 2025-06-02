@@ -94,6 +94,30 @@
             font-size: 2rem;
             margin-bottom: 20px;
         }
+        .overlay {
+            padding: 20px;
+            overflow-y: auto; /* 縦スクロールを可能に */
+        }
+
+        .overlay p {
+            word-wrap: break-word; /* 長い単語を途中で改行 */
+            overflow-wrap: break-word;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                height: auto; /* モバイル時に高さを自動調整 */
+            }
+
+            .col-md-6 {
+                height: auto; /* 高さを自動調整 */
+            }
+
+            .overlay {
+                padding: 20px 10px; /* モバイル時の余白調整 */
+                height: auto;
+            }
+        }
     </style>
 </head>
 
@@ -145,7 +169,7 @@
                         ハイボール　<br>
                     </p>
                     <p>
-                      [Toast] Original Japanese Sake (Courtesy of Yuka Izawa)<br>
+                      [Toast] Original Japanese Sake (Courtesy of Yuka Isawa)<br>
                       [Free Drinks]<br>
                       Assorted Soft Drinks<br>
                       Beer<br>
