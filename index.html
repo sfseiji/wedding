@@ -94,6 +94,32 @@
             font-size: 2rem;
             margin-bottom: 20px;
         }
+
+        /* Mobile向け表示修正 */
+        @media (max-width: 768px) {
+            #menu .section {
+                height: auto;
+                margin-bottom: 5vh;
+            }
+
+            #menu .col-md-6 {
+                height: auto;
+                min-height: 50vh;
+            }
+
+            #menu .overlay {
+                height: auto;
+                overflow-y: auto;
+                padding: 20px;
+            }
+
+            #menu .overlay p {
+                font-size: 0.9rem;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+            }
+        }
+        
     </style>
 </head>
 
