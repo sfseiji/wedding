@@ -94,30 +94,6 @@
             font-size: 2rem;
             margin-bottom: 20px;
         }
-        .overlay {
-            padding: 20px;
-            overflow-y: auto; /* 縦スクロールを可能に */
-        }
-
-        .overlay p {
-            word-wrap: break-word; /* 長い単語を途中で改行 */
-            overflow-wrap: break-word;
-        }
-
-        @media (max-width: 768px) {
-            .section {
-                height: auto; /* モバイル時に高さを自動調整 */
-            }
-
-            .col-md-6 {
-                height: auto; /* 高さを自動調整 */
-            }
-
-            .overlay {
-                padding: 20px 10px; /* モバイル時の余白調整 */
-                height: auto;
-            }
-        }
     </style>
 </head>
 
@@ -126,6 +102,7 @@
     <section id="top" class="section" style="background-image: url('photos/Seiji_Urara.jpg');">
         <div class="main-title">Seiji & Urara Wedding Reception</div>
         <div class="nav-links">
+            <a href="#seat">Seat Map</a> /
             <a href="#menu">Menu & Drink</a> /
             <a href="#participants">Participants</a> /
             <a href="#photos">Photos</a>
