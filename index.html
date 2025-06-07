@@ -120,6 +120,16 @@
             }
         }
 
+        .pdf-container {
+            width: 95%;            /* 幅を広くする（現在90%→95%） */
+            max-width: 1000px;     /* 最大幅を大きくする（現在800px→1000px） */
+            height: 80vh;          /* 高さを増やす（現在60vh→80vh） */
+            margin: auto;
+            border: 2px solid #fff;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
     </style>
 </head>
 
@@ -136,13 +146,13 @@
     </section>
 
     <!-- Seat Map -->
-    <section id="seat" class="section" style="height: auto;">
+    <section id="seat" class="section" style="background-image: url('pdf/seat_back.jpg');">
         <div class="container py-5 text-center">
             <h2 class="text-white mb-4">Seat Map</h2>
             <div class="pdf-container">
-                <iframe src="pdf/seat_map_v1.pdf" class="pdf-iframe"></iframe>
+                <iframe src="pdf/seat_map.pdf" class="pdf-iframe"></iframe>
             </div>
-            <a href="pdf/seat_map_v1.pdf" target="_blank" class="btn btn-light mt-3">
+            <a href="pdf/seat_map.pdf" target="_blank" class="btn btn-light mt-3">
                 View
             </a>
         </div>
