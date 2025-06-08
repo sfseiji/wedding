@@ -209,8 +209,8 @@
     <div class="news-list">
       <div class="participant-name" data-index="0">今井 順子 / Junko Imai [新郎友人 / Groom's Friend]</div>
       <div class="participant-name" data-index="1">大内 正己 / Masami Ouchi [新郎恩師 / Groom's Teacher]</div>
-      <div class="participant-name" data-index="2">大内 聡子 / Satoko Ouchi [新郎友人 / Groom's Friend]</div>
-      <div class="participant-name" data-index="3">佐井 倭裕 / Kazuhiro Sai [新郎友人 / Groom's Friend]</div>
+      <div class="participant-name" data-index="2">佐井 倭裕 / Kazuhiro Sai [新郎友人 / Groom's Friend]</div>
+      <div class="participant-name" data-index="3">大内 聡子 / Satoko Ouchi [新郎友人 / Groom's Friend]</div>
       <div class="participant-name" data-index="4">佐藤 雅仁 / Masahito Sato [新郎友人 / Groom's Friend]</div>
       <div class="participant-name" data-index="5">フラー 修平 / Shuhei Fuller [新郎友人 / Groom's Friend]</div>
     </div>
@@ -466,61 +466,72 @@ const participants = [
 {name: '松澤 美紀 / Miki Matsuzawa', image: '../photos/miki.jpg', description: {jp: '新婦の母です。', en: 'The bride\'s mother.'}}
 ];
 
-document.addEventListener('DOMContentLoaded', function() {
-  const overlay = document.getElementById('overlay');
-  const overlayImage = document.getElementById('overlay-image');
-  const overlayText = document.getElementById('overlay-text');
-  const overlayName = document.getElementById('overlay-name');
-  const closeBtn = document.getElementById('close-btn');
-  const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
-  const btnJP = document.getElementById('btn-jp'); // 日本語ボタン追加
-  const btnEN = document.getElementById('btn-en'); // 英語ボタン追加
-  let currentIndex = 0;
-  let currentLanguage = 'jp'; // 初期言語を日本語に設定
 
-  function showOverlay(index) {
-      currentIndex = index;
-      overlayImage.src = participants[index].image;
-      overlayName.textContent = participants[index].name;
-      currentLanguage = 'jp';
-      overlayText.textContent = participants[index].description[currentLanguage];
-      overlay.style.display = 'flex';
-  }
+    const overlay = document.getElementById('overlay');
+    const overlayImage = document.getElementById('overlay-image');
+    const overlayText = document.getElementById('overlay-text');
+    const overlayName = document.getElementById('overlay-name');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const btnJP = document.getElementById('btn-jp'); // 日本語ボタン追加
+    const btnEN = document.getElementById('btn-en'); // 英語ボタン追加
+    let currentIndex = 0;
+    let currentLanguage = 'jp'; // 初期言語を日本語に設定
 
-  function switchLanguage(lang) {
-      currentLanguage = lang;
-      overlayText.textContent = participants[currentIndex].description[currentLanguage];
-  }
+    // オーバーレイ表示関数（言語対応版）
+    function showOverlay(index) {
+        currentIndex = index;
+        overlayImage.src = participants[index].image;
+        overlayName.textContent = participants[index].name;
 
-  document.querySelectorAll('.participant-name').forEach((element) => {
-      element.addEventListener('click', () => {
-          const index = parseInt(element.getAttribute('data-index'));
-          showOverlay(index);
-      });
-  });
+        // 初期言語は常に日本語をセット
+        currentLanguage = 'jp';
+        overlayText.textContent = participants[index].description[currentLanguage];
 
-  closeBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';
-  });
+        overlay.style.display = 'flex';
+    }
 
-  prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex > 0) ? currentIndex - 1 : participants.length - 1;
-      showOverlay(currentIndex);
-  });
+    // 言語切替関数（共通関数を定義）
+    function switchLanguage(lang) {
+        currentLanguage = lang;
+        overlayText.textContent = participants[currentIndex].description[currentLanguage];
+    }
 
-  nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex < participants.length - 1) ? currentIndex + 1 : 0;
-      showOverlay(currentIndex);
-  });
+    // 各参加者クリックイベント
+    document.querySelectorAll('.participant-name').forEach((element) => {
+        element.addEventListener('click', () => {
+            const index = parseInt(element.getAttribute('data-index'));
+            showOverlay(index);
+        });
+    });
 
-  btnJP.addEventListener('click', () => switchLanguage('jp'));
-  btnEN.addEventListener('click', () => switchLanguage('en'));
+    // 閉じるボタンイベント
+    closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none';
+    });
 
-  overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) overlay.style.display = 'none';
-  });
-});
+    // 前の参加者
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : participants.length - 1;
+        showOverlay(currentIndex);
+    });
+
+    // 次の参加者
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < participants.length - 1) ? currentIndex + 1 : 0;
+        showOverlay(currentIndex);
+    });
+
+    // 言語切替ボタンイベント
+    btnJP.addEventListener('click', () => switchLanguage('jp'));
+    btnEN.addEventListener('click', () => switchLanguage('en'));
+
+    // オーバーレイ外側クリックで閉じる
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.style.display = 'none';
+    });
+
 </script>
 
 </body>
