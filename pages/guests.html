@@ -333,236 +333,248 @@
 <script>
 const participants = [
   // Table 1
-  {name: '今井 順子 / Junko Imai [新郎友人 / Groom\'s Friend]', image: '../photos/junko.jpg', description: {
+  {name: '今井 順子 / Junko Imai', image: '../photos/junko.jpg', description: {
     jp: '新郎の親友であり、学生時代からの友人です。',
     en: 'A close friend of the groom since their student days.'
   }},
-  {name: '大内 正己 / Masami Ouchi [新郎恩師 / Groom\'s Teacher]', image: '../photos/masami.jpg', description: {
+  {name: '大内 正己 / Masami Ouchi', image: '../photos/masami.jpg', description: {
     jp: '新郎の恩師です。',
     en: 'The groom\'s mentor.'
   }},
-  {name: '佐井 倭裕 / Kazuhiro Sai [新郎友人 / Groom\'s Friend]', image: '../photos/kazuhiro.jpg', description: {
+  {name: '佐井 倭裕 / Kazuhiro Sai', image: '../photos/kazuhiro.jpg', description: {
     jp: '新郎の親友であり、学生時代からの友人です。',
     en: 'A close friend of the groom since their student days.'
   }},
-  {name: '大内 聡子 / Satoko Ouchi [新郎友人 / Groom\'s Friend]', image: '../photos/satoko.jpg', description: {
+  {name: '大内 聡子 / Satoko Ouchi', image: '../photos/satoko.jpg', description: {
     jp: '新郎の友人です。',
     en: 'A friend of the groom.'
   }},
-  {name: '佐藤 雅仁 / Masahito Sato [新郎友人 / Groom\'s Friend]', image: '../photos/masahito.jpg', description: {
+  {name: '佐藤 雅仁 / Masahito Sato', image: '../photos/masahito.jpg', description: {
     jp: '新郎の友人です。',
     en: 'A friend of the groom.'
   }},
-  {name: 'フラー 修平 / Shuhei Fuller [新郎友人 / Groom\'s Friend]', image: '../photos/shuhei.jpg', description: {
+  {name: 'フラー 修平 / Shuhei Fuller', image: '../photos/shuhei.jpg', description: {
     jp: '新郎の友人です。',
     en: 'A friend of the groom.'
   }},
 
   // Table 2
-  {name: 'Francesco Valentino [新郎新婦友人 / Couple\'s Friend]', image: '../photos/francesco.jpg', description: {
+  {name: 'Francesco Valentino', image: '../photos/francesco.jpg', description: {
     jp: '新郎新婦の友人です。',
     en: 'A friend of both bride and groom.'
   }},
-  {name: 'Isabella Cortzen [新郎新婦友人 / Couple\'s Friend]', image: '../photos/isabella.jpg', description: {
+  {name: 'Isabella Cortzen', image: '../photos/isabella.jpg', description: {
     jp: '新郎新婦の友人です。',
     en: 'A friend of both bride and groom.'
   }},
-  {name: 'Gabriel Brammer [新郎新婦友人 / Couple\'s Friend]', image: '../photos/gabriel.jpg', description: {
+  {name: 'Gabriel Brammer', image: '../photos/gabriel.jpg', description: {
     jp: '新郎新婦の友人です。',
     en: 'A friend of both bride and groom.'
   }},
-  {name: 'Violeta Brammer [新郎新婦友人 / Couple\'s Friend]', image: '../photos/violeta.jpg', description: {
+  {name: 'Violeta Brammer', image: '../photos/violeta.jpg', description: {
     jp: '新郎新婦の友人です。',
     en: 'A friend of both bride and groom.'
   }},
-  {name: 'Nicanor Brammer [新郎新婦友人 / Couple\'s Friend]', image: '../photos/nicanor.jpg', description: {
+  {name: 'Nicanor Brammer', image: '../photos/nicanor.jpg', description: {
     jp: '新郎新婦の友人です。',
     en: 'A friend of both bride and groom.'
   }},
-  {name: 'Macarena Soledad [新郎新婦友人 / Couple\'s Friend]', image: '../photos/macarena.jpg', description: {
+  {name: 'Macarena Soledad', image: '../photos/macarena.jpg', description: {
     jp: '新郎新婦の友人です。',
     en: 'A friend of both bride and groom.'
   }},
 
   // Table 3
-  {name: '高橋 厚子 / Atsuko Takahashi [新婦恩師 / Bride\'s Teacher]', image: '../photos/atsuko.jpg', description: {
+  {name: '高橋 厚子 / Atsuko Takahashi', image: '../photos/atsuko.jpg', description: {
     jp: '新婦の恩師です。',
     en: 'The bride\'s mentor.'
   }},
-  {name: '朴 玲香 / Reika Park [新婦先輩 / Bride\'s Senior]', image: '../photos/reika.jpg', description: {
+  {name: '朴 玲香 / Reika Park', image: '../photos/reika.jpg', description: {
     jp: '新婦の先輩です。',
     en: 'A senior colleague of the bride.'
   }},
-  {name: 'Tristan Thompson [新婦友人 / Bride\'s Friend]', image: '../photos/tristan.jpg', description: {
+  {name: 'Tristan Thompson', image: '../photos/tristan.jpg', description: {
     jp: '新婦の友人です。',
     en: 'A friend of the bride.'
   }},
-  {name: '加藤 蔵人 / Kurato Kato [新婦友人 / Bride\'s Friend]', image: '../photos/kurato.jpg', description: {
+  {name: '加藤 蔵人 / Kurato Kato', image: '../photos/kurato.jpg', description: {
     jp: '新婦の友人です。',
     en: 'A friend of the bride.'
   }},
-  {name: 'Sydney Ransbury [新婦友人 / Bride\'s Friend]', image: '../photos/sydney.jpg', description: {
+  {name: 'Sydney Ransbury', image: '../photos/sydney.jpg', description: {
     jp: '新婦の友人です。',
     en: 'A friend of the bride.'
   }},
-  {name: '加藤 紗矢香 / Sayaka Kato [新婦友人 / Bride\'s Friend]', image: '../photos/sayaka.jpg', description: {
+  {name: '加藤 紗矢香 / Sayaka Kato', image: '../photos/sayaka.jpg', description: {
     jp: '新婦の友人です。',
     en: 'A friend of the bride.'
   }},
 
   
   // Table 4
-  {name: '金子 大倫 / Hironori Kaneko [新郎友人 / Groom\'s Friend]', image: '../photos/hironori.jpg', description: {jp: '新郎の友人です。', en: 'A friend of the groom.'}},
-  {name: '角野 為耶 / Nasuka Sumino [新郎友人 / Groom\'s Friend]', image: '../photos/nasuka.jpg', description: {jp: '新郎の友人です。', en: 'A friend of the groom.'}},
-  {name: '森 英記 / Hideki Mori [新郎友人 / Groom\'s Friend]', image: '../photos/hideki.jpg', description: {jp: '新郎の友人です。', en: 'A friend of the groom.'}},
-  {name: '田中 新 / Arata Tanaka [新郎新婦友人 / Couple\'s Friend]', image: '../photos/arata.jpg', description: {jp: '新郎新婦の友人です。', en: 'A friend of both bride and groom.'}},
-  {name: '城 俊徳 / Toshinori Jo [新郎友人 / Groom\'s Friend]', image: '../photos/toshinori.jpg', description: {jp: '新郎の友人です。', en: 'A friend of the groom.'}},
-  {name: '菅 雄輝 / Yuki Suga [新郎新婦友人 / Couple\'s Friend]', image: '../photos/yuki.jpg', description: {jp: '新郎新婦の友人です。', en: 'A friend of both bride and groom.'}},
-  
+  {name: '金子 大倫 / Hironori Kaneko', image: '../photos/hironori.jpg', description: {
+    jp: '新郎の友人です。', 
+    en: 'A friend of the groom.'}},
+  {name: '角野 為耶 / Nasuka Sumino', image: '../photos/nasuka.jpg', description: {
+    jp: '新郎の友人です。', 
+    en: 'A friend of the groom.'}},
+  {name: '森 英記 / Hideki Mori', image: '../photos/hideki.jpg', description: {
+    jp: '新郎の友人です。', 
+    en: 'A friend of the groom.'}},
+  {name: '田中 新 / Arata Tanaka ', image: '../photos/arata.jpg', description: {
+    jp: '新郎新婦の友人です。', 
+    en: 'A friend of both bride and groom.'}},
+  {name: '城 俊徳 / Toshinori Jo ', image: '../photos/toshinori.jpg', description: {
+    jp: '新郎の友人です。', 
+    en: 'A friend of the groom.'}},
+  {name: '菅 雄輝 / Yuki Suga ', image: '../photos/yuki.jpg', description: {
+    jp: '新郎新婦の友人です。', 
+    en: 'A friend of both bride and groom.'}},
+
     // Table 5
-    {name: '結城 東輝 / Toki Yuuki [新郎友人 / Groom\'s Friend]', image: '../photos/toki.jpg', description: {
+    {name: '結城 東輝 / Toki Yuuki ', image: '../photos/toki.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
-    {name: '崎岡 優希 / Yuki Sakioka [新郎友人 / Groom\'s Friend]', image: '../photos/yuki.jpg', description: {
+    {name: '崎岡 優希 / Yuki Sakioka', image: '../photos/yuki.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
-    {name: '篠原 祐太 / Yuta Shinohara [新郎友人 / Groom\'s Friend]', image: '../photos/yuta.jpg', description: {
+    {name: '篠原 祐太 / Yuta Shinohara', image: '../photos/yuta.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
-    {name: '阿部 祐介 / Yusuke Abe [新郎新婦友人 / Couple\'s Friend]', image: '../photos/yusuke.jpg', description: {
+    {name: '阿部 祐介 / Yusuke Abe ', image: '../photos/yusuke.jpg', description: {
       jp: '新郎新婦の友人です。',
       en: 'A friend of both bride and groom.'
     }},
-    {name: '伊澤 優花 / Yuka Isawa [新郎新婦友人 / Couple\'s Friend]', image: '../photos/yuka.jpg', description: {
+    {name: '伊澤 優花 / Yuka Isawa ', image: '../photos/yuka.jpg', description: {
       jp: '新郎新婦の友人です。',
       en: 'A friend of both bride and groom.'
     }},
 
     // Table 6
-    {name: '山下 雄大 / Yudai Yamashita [新婦友人 / Bride\'s Friend]', image: '../photos/yudai.jpg', description: {
+    {name: '山下 雄大 / Yudai Yamashita', image: '../photos/yudai.jpg', description: {
       jp: '新婦の友人です。',
       en: 'A friend of the bride.'
     }},
-    {name: '小野原 絵里 / Eri Onohara [新婦先輩 / Bride\'s Senior]', image: '../photos/eri.jpg', description: {
+    {name: '小野原 絵里 / Eri Onohara ', image: '../photos/eri.jpg', description: {
       jp: '新婦の先輩です。',
       en: 'A senior colleague of the bride.'
     }},
-    {name: '佐伯 健人 / Kento Saeki [新婦友人 / Bride\'s Friend]', image: '../photos/kento.jpg', description: {
+    {name: '佐伯 健人 / Kento Saeki ', image: '../photos/kento.jpg', description: {
       jp: '新婦の友人です。',
       en: 'A friend of the bride.'
     }},
-    {name: '秋山 諭 / Satoshi Akiyama [新婦友人 / Bride\'s Friend]', image: '../photos/satoshi.jpg', description: {
+    {name: '秋山 諭 / Satoshi Akiyama', image: '../photos/satoshi.jpg', description: {
       jp: '新婦の友人です。',
       en: 'A friend of the bride.'
     }},
-    {name: '小野寺 芽衣 / Mei Onodera [新婦友人 / Bride\'s Friend]', image: '../photos/mei.jpg', description: {
+    {name: '小野寺 芽衣 / Mei Onodera ', image: '../photos/mei.jpg', description: {
       jp: '新婦の友人です。',
       en: 'A friend of the bride.'
     }},
-    {name: '花田 英行 / Hideyuki Hanada [新婦友人 / Bride\'s Friend]', image: '../photos/hideyuki.jpg', description: {
+    {name: '花田 英行 / Hideyuki Hanada', image: '../photos/hideyuki.jpg', description: {
       jp: '新婦の友人です。',
       en: 'A friend of the bride.'
     }},
 
     // Table 7
-    {name: '荒堀 憲二 / Kenji Arahori [新郎伯父 / Groom\'s Uncle]', image: '../photos/kenji.jpg', description: {
+    {name: '荒堀 憲二 / Kenji Arahori', image: '../photos/kenji.jpg', description: {
       jp: '新郎の伯父です。',
       en: 'The groom\'s uncle.'
     }},
-    {name: '荒堀 新造 / Shinzo Arahori [新郎叔父 / Groom\'s Uncle]', image: '../photos/shinzo.jpg', description: {
+    {name: '荒堀 新造 / Shinzo Arahori', image: '../photos/shinzo.jpg', description: {
       jp: '新郎の叔父です。',
       en: 'The groom\'s uncle.'
     }},
-    {name: '西村 浩 / Hiroshi Nishimura [新郎叔父 / Groom\'s Uncle]', image: '../photos/hiroshi.jpg', description: {
+    {name: '西村 浩 / Hiroshi Nishimura', image: '../photos/hiroshi.jpg', description: {
       jp: '新郎の叔父です。',
       en: 'The groom\'s uncle.'
     }},
-    {name: '西村 恭子 / Kyoko Nishimura [新郎伯母 / Groom\'s Aunt]', image: '../photos/kyoko.jpg', description: {
+    {name: '西村 恭子 / Kyoko Nishimura', image: '../photos/kyoko.jpg', description: {
       jp: '新郎の伯母です。',
       en: 'The groom\'s aunt.'
     }},
-    {name: '加藤 恵子 / Keiko Kato [新郎叔母 / Groom\'s Aunt]', image: '../photos/keiko.jpg', description: {
+    {name: '加藤 恵子 / Keiko Kato', image: '../photos/keiko.jpg', description: {
       jp: '新郎の叔母です。',
       en: 'The groom\'s aunt.'
     }},
 
     // Table 8
-    {name: '大和田 良房 / Yoshifusa Owada [新郎新婦友人 / Couple\'s Friend]', image: '../photos/yoshifusa.jpg', description: {
+    {name: '大和田 良房 / Yoshifusa Owada', image: '../photos/yoshifusa.jpg', description: {
       jp: '新郎新婦の友人です。',
       en: 'A friend of both bride and groom.'
     }},
-    {name: '今村 将典 / Masanori Imamura [新郎友人 / Groom\'s Friend]', image: '../photos/masanori.jpg', description: {
+    {name: '今村 将典 / Masanori Imamura', image: '../photos/masanori.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
-    {name: '足立 大輔 / Daisuke Adachi [新郎友人 / Groom\'s Friend]', image: '../photos/daisuke.jpg', description: {
+    {name: '足立 大輔 / Daisuke Adachi', image: '../photos/daisuke.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
-    {name: '倉知 寛之 / Hiroyuki Kurachi [新郎友人 / Groom\'s Friend]', image: '../photos/hiroyuki.jpg', description: {
+    {name: '倉知 寛之 / Hiroyuki Kurachi', image: '../photos/hiroyuki.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
-    {name: '小林 尚生 / Naoki Kobayashi [新郎友人 / Groom\'s Friend]', image: '../photos/naoki.jpg', description: {
+    {name: '小林 尚生 / Naoki Kobayashi ', image: '../photos/naoki.jpg', description: {
       jp: '新郎の友人です。',
       en: 'A friend of the groom.'
     }},
 
     // Table 9
-    {name: '藤本 早苗 / Sanae Fujimoto [新郎妹 / Groom\'s Sister]', image: '../photos/sanae.jpg', description: {
+    {name: '藤本 早苗 / Sanae Fujimoto ', image: '../photos/sanae.jpg', description: {
       jp: '新郎の妹です。',
       en: 'The groom\'s sister.'
     }},
-    {name: '藤本 晃嗣 / Koji Fujimoto [新郎兄 / Groom\'s Brother]', image: '../photos/koji.jpg', description: {
+    {name: '藤本 晃嗣 / Koji Fujimoto ', image: '../photos/koji.jpg', description: {
       jp: '新郎の兄です。',
       en: 'The groom\'s brother.'
     }},
-    {name: '藤本 佳廣 / Yoshihiro Fujimoto [新郎父 / Groom\'s Father]', image: '../photos/yoshihiro.jpg', description: {
+    {name: '藤本 佳廣 / Yoshihiro Fujimoto', image: '../photos/yoshihiro.jpg', description: {
       jp: '新郎の父です。',
       en: 'The groom\'s father.'
     }},
-    {name: '藤本 笑愛 / Ema Fujimoto [新郎姪 / Groom\'s Niece]', image: '../photos/ema.jpg', description: {
+    {name: '藤本 笑愛 / Ema Fujimoto', image: '../photos/ema.jpg', description: {
       jp: '新郎の姪です。',
       en: 'The groom\'s niece.'
     }},
-    {name: '藤本 博子 / Hiroko Fujimoto [新郎母 / Groom\'s Mother]', image: '../photos/hiroko.jpg', description: {
+    {name: '藤本 博子 / Hiroko Fujimoto ', image: '../photos/hiroko.jpg', description: {
       jp: '新郎の母です。',
       en: 'The groom\'s mother.'
     }},
-    {name: '藤本 笑未 / Emi Fujimoto [新郎義姉 / Groom\'s Sister-in-law]', image: '../photos/emi.jpg', description: {
+    {name: '藤本 笑未 / Emi Fujimoto ', image: '../photos/emi.jpg', description: {
       jp: '新郎の義姉です。',
       en: 'The groom\'s sister-in-law.'
     }},
 
     // Table 10
-    {name: '杉本 彰 / Akira Sugimoto [新婦伯父 / Bride\'s Uncle]', image: '../photos/akira.jpg', description: {
+    {name: '杉本 彰 / Akira Sugimoto ', image: '../photos/akira.jpg', description: {
       jp: '新婦の伯父です。',
       en: 'The bride\'s uncle.'
     }},
-    {name: '杉本 吉人 / Yoshito Sugimoto [新婦伯父 / Bride\'s Uncle]', image: '../photos/yoshito.jpg', description: {
+    {name: '杉本 吉人 / Yoshito Sugimoto', image: '../photos/yoshito.jpg', description: {
       jp: '新婦の伯父です。',
       en: 'The bride\'s uncle.'
     }},
-    {name: '杉本 整子 / Seiko Sugimoto [新郎伯母 / Groom\'s Aunt]', image: '../photos/seiko.jpg', description: {
+    {name: '杉本 整子 / Seiko Sugimoto', image: '../photos/seiko.jpg', description: {
       jp: '新郎の伯母です。',
       en: 'The groom\'s aunt.'
     }},
-    {name: '杉本 照代 / Teruyo Sugimoto [新婦伯母 / Bride\'s Aunt]', image: '../photos/teruyo.jpg', description: {
+    {name: '杉本 照代 / Teruyo Sugimoto', image: '../photos/teruyo.jpg', description: {
       jp: '新婦の伯母です。',
       en: 'The bride\'s aunt.'
     }},
-    {name: '松澤 旺大 / Akihiro Matsuzawa [新婦弟 / Bride\'s Brother]', image: '../photos/akihiro.jpg', description: {
+    {name: '松澤 旺大 / Akihiro Matsuzawa', image: '../photos/akihiro.jpg', description: {
       jp: '新婦の弟です。',
       en: 'The bride\'s brother.'
     }},
-    {name: '松澤 等 / Hitoshi Matsuzawa [新婦父 / Bride\'s Father]', image: '../photos/hitoshi.jpg', description: {
+    {name: '松澤 等 / Hitoshi Matsuzawa ', image: '../photos/hitoshi.jpg', description: {
       jp: '新婦の父です。',
       en: 'The bride\'s father.'
     }},
-    {name: '松澤 美紀 / Miki Matsuzawa [新婦母 / Bride\'s Mother]', image: '../photos/miki.jpg', description: {
+    {name: '松澤 美紀 / Miki Matsuzawa', image: '../photos/miki.jpg', description: {
       jp: '新婦の母です。',
       en: 'The bride\'s mother.'
     }}
