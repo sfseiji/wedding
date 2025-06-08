@@ -566,71 +566,61 @@ const participants = [
       en: 'The bride\'s mother.'
     }}];
 
-const overlay = document.getElementById('overlay');
-const overlayImage = document.getElementById('overlay-image');
-const overlayText = document.getElementById('overlay-text');
-const overlayName = document.getElementById('overlay-name');
-const closeBtn = document.getElementById('close-btn');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const btnJP = document.getElementById('btn-jp'); // 日本語ボタン追加
-const btnEN = document.getElementById('btn-en'); // 英語ボタン追加
-let currentIndex = 0;
-let currentLanguage = 'jp'; // 初期言語を日本語に設定
+document.addEventListener('DOMContentLoaded', function() {
+  const overlay = document.getElementById('overlay');
+  const overlayImage = document.getElementById('overlay-image');
+  const overlayText = document.getElementById('overlay-text');
+  const overlayName = document.getElementById('overlay-name');
+  const closeBtn = document.getElementById('close-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const btnJP = document.getElementById('btn-jp'); // 日本語ボタン追加
+  const btnEN = document.getElementById('btn-en'); // 英語ボタン追加
+  let currentIndex = 0;
+  let currentLanguage = 'jp'; // 初期言語を日本語に設定
 
-// オーバーレイ表示関数（言語対応版）
-function showOverlay(index) {
-    currentIndex = index;
-    overlayImage.src = participants[index].image;
-    overlayName.textContent = participants[index].name;
+  function showOverlay(index) {
+      currentIndex = index;
+      overlayImage.src = participants[index].image;
+      overlayName.textContent = participants[index].name;
+      currentLanguage = 'jp';
+      overlayText.textContent = participants[index].description[currentLanguage];
+      overlay.style.display = 'flex';
+  }
 
-    // 初期言語は常に日本語をセット
-    currentLanguage = 'jp';
-    overlayText.textContent = participants[index].description[currentLanguage];
+  function switchLanguage(lang) {
+      currentLanguage = lang;
+      overlayText.textContent = participants[currentIndex].description[currentLanguage];
+  }
 
-    overlay.style.display = 'flex';
-}
+  document.querySelectorAll('.participant-name').forEach((element) => {
+      element.addEventListener('click', () => {
+          const index = parseInt(element.getAttribute('data-index'));
+          showOverlay(index);
+      });
+  });
 
-// 言語切替関数（共通関数を定義）
-function switchLanguage(lang) {
-    currentLanguage = lang;
-    overlayText.textContent = participants[currentIndex].description[currentLanguage];
-}
+  closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+  });
 
-// 各参加者クリックイベント
-document.querySelectorAll('.participant-name').forEach((element) => {
-    element.addEventListener('click', () => {
-        const index = parseInt(element.getAttribute('data-index'));
-        showOverlay(index);
-    });
+  prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex > 0) ? currentIndex - 1 : participants.length - 1;
+      showOverlay(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex < participants.length - 1) ? currentIndex + 1 : 0;
+      showOverlay(currentIndex);
+  });
+
+  btnJP.addEventListener('click', () => switchLanguage('jp'));
+  btnEN.addEventListener('click', () => switchLanguage('en'));
+
+  overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) overlay.style.display = 'none';
+  });
 });
-
-// 閉じるボタンイベント
-closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-});
-
-// 前の参加者
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex > 0) ? currentIndex - 1 : participants.length - 1;
-    showOverlay(currentIndex);
-});
-
-// 次の参加者
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex < participants.length - 1) ? currentIndex + 1 : 0;
-    showOverlay(currentIndex);
-});
-
-// 言語切替ボタンイベント
-btnJP.addEventListener('click', () => switchLanguage('jp'));
-btnEN.addEventListener('click', () => switchLanguage('en'));
-
-// オーバーレイ外側クリックで閉じる
-overlay.addEventListener('click', (e) => {
-    if (e.target === overlay) overlay.style.display = 'none';
-});
-
 </script>
 
 </body>
