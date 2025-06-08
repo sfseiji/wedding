@@ -19,18 +19,28 @@
       margin: 0;
       font-family: 'Times New Roman', Times, serif;
     }
-    /* 固定背景画像：半透明感を出すために brightness を調整 */
-    .full-bg-image {
-      background: url('../photos/copen.jpg') no-repeat center center fixed;
-      background-size: cover;
-      filter: brightness(40%);
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      z-index: -10;
-    }
+        /* 固定背景画像：半透明感を出すために brightness を調整 */
+        .full-bg-image {
+          background: url('../photos/copen.jpg') no-repeat center center fixed;
+          background-size: cover;
+          filter: brightness(40%);
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -10;
+        }
+
+        /* モバイル調整 */
+        @media (max-width: 768px) {
+          .full-bg-image {
+            background-attachment: scroll; /* モバイルで背景画像のスクロール調整 */
+            background-position: center center; /* 画像を中央に */
+            background-size: cover; /* 画像を画面にフィット */
+          }
+        }
+
         .participants-list {
             margin-top: 80px;
             text-align: center;
@@ -110,33 +120,45 @@
           text-decoration: underline;
         }
 
+
         .news-list {
           max-width: 95%;
           margin: auto;
           text-align: center;
           background-color: transparent;
-          padding: 0;
+          padding-bottom: 1rem;
+          margin-bottom: 2rem; /* テーブル間の余白を広げる */
+          border-bottom: 1px solid rgba(255,255,255,0.15); /* テーブルごとの下に横線を追加 */
         }
 
-        .news-list .list-group-item {
-          background-color: transparent;
-          border: none;
-          padding: 0.75rem 0;
-          border-bottom: 1px solid rgba(255,255,255,0.15);
-          color: #ffffff;
+        .participant-name {
           cursor: pointer;
+          font-size: 1.0rem;
+          margin: 8px 0; /* 縦の余白を少し調整 */
+          color: #ffffff;
           transition: color 0.3s;
         }
 
-        .news-list .list-group-item:hover {
+        .participant-name:hover {
           color: #66b3ff;
         }
-        .participants-list h2 {
-          text-align: center;
-          margin-top: 50px;
-          margin-bottom: 20px;
-        }
 
+    /* モバイル端末用調整 */
+    @media (max-width: 768px) {
+      .participant-name {
+        font-size: 0.85rem; /* モバイル表示で文字を少し小さくする */
+        line-height: 1.2;   /* 行間を調整 */
+        margin: 6px 0;      /* 縦の余白をさらに少し調整 */
+      }
+
+      h2 {
+        font-size: 1.5rem; /* モバイルでのテーブルタイトルのサイズ調整 */
+      }
+
+      .participants-list h1 {
+        font-size: 2rem; /* ページタイトルもモバイル向けに調整 */
+      }
+    }
 
     </style>
 </head>
