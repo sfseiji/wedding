@@ -602,18 +602,18 @@ function showOverlay(index) {
     overlayImage.src = participants[index].image;
     overlayName.textContent = participants[index].name;
 
-    // 初期言語は常に日本語をセット
     currentLanguage = 'jp';
-    overlayText.textContent = participants[index].description[currentLanguage];
+    overlayText.innerHTML = participants[index].description[currentLanguage]; // innerHTMLに変更する
 
     overlay.style.display = 'flex';
 }
 
-// 言語切替関数（共通関数を定義）
+// 言語切替関数も同様に変更
 function switchLanguage(lang) {
     currentLanguage = lang;
-    overlayText.textContent = participants[currentIndex].description[currentLanguage];
+    overlayText.innerHTML = participants[currentIndex].description[currentLanguage]; // innerHTMLに変更する
 }
+
 
 // 各参加者クリックイベント
 document.querySelectorAll('.participant-name').forEach((element) => {
